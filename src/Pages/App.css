@@ -1,0 +1,197 @@
+/* ===== Global Reset & Theme ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a0a0a; /* deep dark background */
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+/* ===== Page Layout ===== */
+div {
+  width: 100%;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: #000;
+  color: white;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #222;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ===== Nav Links inside Header ===== */
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+header nav ul li {
+  cursor: pointer;
+  color: #ccc;
+  font-size: 0.95rem;
+  transition: color 0.2s ease-in-out;
+}
+
+header nav ul li:hover {
+  color: #fff;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #000;
+  color: #bbb;
+  text-align: center;
+  padding: 15px 0;
+  border-top: 1px solid #222;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+/* ===== Main Page (Homepage) ===== */
+.main-page {
+  padding: 120px 50px 100px; /* space for header & footer */
+  text-align: center;
+}
+
+.main-page h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.main-page p {
+  color: #bbb;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ===== Buttons (for navigation etc.) ===== */
+button {
+  background: linear-gradient(135deg, #0055ff, #0033cc);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 25px;
+  margin: 15px 0;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 1rem;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #0066ff, #0044cc);
+}
+
+/* ===== Buy Page (cards grid) ===== */
+.buy-page {
+  padding: 120px 40px 100px;
+}
+
+.pet-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.pet-cards div {
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.pet-cards div:hover {
+  transform: translateY(-5px);
+}
+
+.pet-cards li {
+  list-style: none;
+  margin: 6px 0;
+  color: #ddd;
+}
+
+/* ===== Sell Page (Form) ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 320px;
+  margin: 150px auto;
+  background: #111;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 255, 0.3);
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #007bff;
+  background: #1a1a1a;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+}
+
+input::placeholder {
+  color: #777;
+}
+
+/* ===== Login Page ===== */
+.login-page {
+  padding: 150px 50px;
+  text-align: center;
+}
+
+.login-page input {
+  width: 300px;
+  margin: 10px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  header nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main-page, .buy-page {
+    padding: 100px 20px 100px;
+  }
+
+  form {
+    width: 90%;
+  }
+}
