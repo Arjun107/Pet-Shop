@@ -5,27 +5,24 @@ import SellPage from "./Pages/SellPage";
 import LoginPage from "./Pages/Login";
 import Header from "./Pages/Header";
 import Footer from "./Pages/Footer";
-import  "./Pages/App.css";
+import "./Pages/App.css";
 import Shop from "./Pages/shop";
 import Cart from "./Pages/Cart";
-
-
 
 function App() {
   return (
     <div>
-      <Header/>
-      <Cart/>
-      <Routes>
+      <Header />
 
-        
+      <Routes>
         <Route path="/buypage" element={<BuyPage />} />
         <Route path="/sellpage" element={<SellPage />} />
         <Route path="/" element={<MainPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/shop" element={<Shop/>} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

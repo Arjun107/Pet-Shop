@@ -15,11 +15,10 @@ const BuyPage = () => {
     setdog(res);
   };
 
-  const addtocart =(()=>{
-    
-    <Cart detail={dog}/>
-    console.log({dog})
-  })
+  const [dogg, setdogg] = useState([null]);
+  const addtocart = (props) => {
+    setdogg(props);
+  };
 
   return (
     <div className="pet-cards-container">
@@ -29,10 +28,12 @@ const BuyPage = () => {
           <li className="Age">Age: {x.Age}</li>
           <li className="Contact">Contact: {x.Contact}</li>
           <li className="Loction">Location: {x.Location}</li>
-          <button onClick={addtocart}></button>
+          <button onClick={() => addtocart(x)}></button>
         </div>
       ))}
-      
+
+      {dogg && <Cart detail={dogg} />}
+      <Cart/>
     </div>
   );
 };
